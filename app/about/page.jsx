@@ -84,7 +84,7 @@ const page = () => {
             {/* Replace with your image */}
             <img
               src="/path/to/image4.jpg"
-              alt="Description 4"
+              alt="Description 5"
               className="w-full h-auto rounded"
             />
           </div>
@@ -98,7 +98,7 @@ const page = () => {
             {/* Replace with your image */}
             <img
               src="/path/to/image4.jpg"
-              alt="Description 4"
+              alt="Description 6"
               className="w-full h-auto rounded"
             />
           </div>
