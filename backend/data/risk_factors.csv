@@ -1,0 +1,42 @@
+disease,risk_factors
+Fungal infection,Weakened immune system - Prolonged use of antibiotics - Warm and humid climates - Poor hygiene - Tight or damp clothing
+Allergy,Family history of allergies - Exposure to allergens - Asthma - Eczema - Seasonal changes
+GERD (Gastroesophageal Reflux Disease),Obesity - Smoking - Pregnancy - Hiatal hernia - Eating large meals or lying down after eating
+Chronic cholestasis,Chronic liver disease - Genetic predisposition - Alcohol abuse - Certain medications - Obesity
+Drug Reaction,Previous drug allergies - Polypharmacy - Underlying health conditions - Age - Genetic factors
+Peptic ulcer disease,Infection with H. pylori - Long-term use of NSAIDs - Smoking - Excessive alcohol consumption - Stress
+AIDS (Acquired Immunodeficiency Syndrome),Unprotected sex - Sharing needles - Blood transfusions before 1985 - Being born to an HIV-positive mother - Multiple sexual partners
+Diabetes,Family history of diabetes - Obesity - Sedentary lifestyle - Unhealthy diet - Age over 45 years
+Gastroenteritis,Consumption of contaminated food or water - Poor sanitation - Weakened immune system - Close contact with infected individuals - Age (children and elderly)
+Bronchial Asthma,Family history of asthma - Allergies - Exposure to pollution - Respiratory infections during childhood - Smoking or secondhand smoke exposure
+Hypertension,Family history of hypertension - Obesity - High salt intake - Lack of physical activity - Chronic stress
+Migraine,Family history of migraines - Hormonal changes - Stress - Certain foods and drinks - Sensory triggers like bright lights or loud sounds
+Cervical spondylosis,Age-related wear and tear - Repeated neck injuries - Sedentary lifestyle - Poor posture - Family history of neck issues
+Paralysis (brain hemorrhage),High blood pressure - Smoking - Diabetes - Obesity - Family history of stroke
+Jaundice,Liver diseases - Excessive alcohol consumption - Viral hepatitis - Genetic conditions - Gallstones
+Malaria,Living in or traveling to malaria-endemic areas - Lack of mosquito protection - Weak immune system - Pregnancy - Poor sanitation
+Chicken pox,Lack of vaccination - Close contact with infected individuals - Weakened immune system - Pregnancy - Exposure in childhood
+Dengue,Living in tropical or subtropical areas - Lack of mosquito control - Poor sanitation - Weak immune system - Traveling to endemic regions
+Typhoid,Consumption of contaminated food or water - Poor sanitation - Close contact with infected individuals - Traveling to endemic areas - Weak immune system
+Hepatitis A,Consumption of contaminated food or water - Poor hygiene - Close contact with infected individuals - Lack of vaccination - Traveling to endemic areas
+Hepatitis B,Unprotected sex - Sharing needles - Mother-to-child transmission during birth - Lack of vaccination - Occupational exposure to blood
+Hepatitis C,Sharing needles - Blood transfusions before 1992 - Unprotected sex - Mother-to-child transmission during birth - Being born between 1945 and 1965
+Hepatitis D,Infection with hepatitis B - Sharing needles - Unprotected sex - Mother-to-child transmission during birth - Weak immune system
+Hepatitis E,Consumption of contaminated water - Poor sanitation - Lack of vaccination - Traveling to endemic areas - Pregnancy
+Alcoholic hepatitis,Chronic alcohol consumption - Genetic predisposition - Obesity - Malnutrition - Female gender
+Tuberculosis,Close contact with infected individuals - Weakened immune system - Malnutrition - Smoking - Living in crowded conditions
+Common Cold,Close contact with infected individuals - Seasonal changes - Weakened immune system - Smoking - Stress
+Pneumonia,Weakened immune system - Smoking - Chronic illnesses like diabetes or asthma - Age (young children and elderly) - Hospitalization
+Dimorphic hemorrhoids (piles),Chronic constipation - Prolonged sitting - Pregnancy - Obesity - Low fiber diet
+Heart attack,High blood pressure - High cholesterol - Smoking - Obesity - Family history of heart disease
+Varicose veins,Age - Family history of varicose veins - Prolonged standing or sitting - Obesity - Pregnancy
+Hypothyroidism,Autoimmune conditions - Family history of thyroid disease - Iodine deficiency - Radiation exposure - Certain medications
+Hyperthyroidism,Graves' disease - Family history of thyroid disorders - Smoking - Stress - Excess iodine intake
+Hypoglycemia,Diabetes treatment - Skipping meals - Excessive alcohol consumption - Hormonal disorders - Intense physical activity
+Osteoarthritis,Age - Obesity - Joint injuries - Genetic predisposition - Repeated stress on joints
+Arthritis,Family history of arthritis - Age - Obesity - Joint injuries - Repeated joint stress
+(Vertigo) Paroxysmal Positional Vertigo,Age over 50 years - Previous head injury - Inner ear infections - Prolonged bed rest - Migraines
+Acne,Hormonal changes - Family history of acne - Oily skin - Use of certain cosmetics - Stress
+Urinary tract infection,Being female - Sexual activity - Menopause - Blockages in urinary tract - Use of certain birth control methods
+Psoriasis,Family history of psoriasis - Stress - Obesity - Infections - Smoking
+Impetigo,Close contact with infected individuals - Poor hygiene - Warm and humid climate - Minor skin injuries - Weak immune system
