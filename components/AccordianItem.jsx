@@ -31,7 +31,7 @@ const AccordionItem = ({ title, symptoms }) => {
                 <input
                   type="checkbox"
                   id={`symptom-${title}-${index}`}
-                  checked={selectedSymptoms.includes(symptom)} // Check if this symptom is selected
+                  checked={selectedSymptoms.includes(symptom)}
                   onChange={() => handleCheckboxChange(symptom)} // Handle checkbox change
                   className="mr-2 p-4"
                 />
