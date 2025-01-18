@@ -1,16 +1,34 @@
-// pages/checker/page.jsx
-import Accordion from "@components/Accordian";
+"use client";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
+import Accordion from "@components/Accordion";
 import sections from "./symptomSection";
-import Button from "@components/Button";
 
 const CheckerPage = () => {
+  const router = useRouter();
+  const [selectedSymptoms, setSelectedSymptoms] = useState([]);
+
+  // Update selected symptoms
+  const handleSymptomChange = (symptoms) => {
+    setSelectedSymptoms(symptoms);
+  };
+
+  const handlePredict = () => {
+    // Encode the symptoms array for URL-safe transmission
+    const encodedSymptoms = encodeURIComponent(
+      JSON.stringify(selectedSymptoms)
+    );
+    router.push(`/predict?symptoms=${encodedSymptoms}`);
+    console.log("sent");
+  };
+
   return (
     <div className="min-h-screen p-6 font-merriweather">
       <h1 className="text-4xl font-bold mb-4 text-center">
         Symptom Assessment
       </h1>
       <div className="flex">
-        <div className="w-1/2 bg-[#E8F2FF] m-16 p-20 rounded shadow ">
+        <div className="w-1/2 bg-[#E8F2FF] m-16 p-20 rounded shadow">
           <h1 className="text-2xl font-semibold m-8 text-center">
             Introduction
           </h1>
@@ -44,8 +62,17 @@ const CheckerPage = () => {
           <h1 className="text-2xl font-semibold m-2 mb-4">
             What are your symptoms?
           </h1>
-          <Accordion sections={sections} />
-          <Button text="Predict" href="/predict" />
+          <Accordion
+            sections={sections}
+            onSymptomChange={handleSymptomChange}
+          />
+          <button
+            onClick={handlePredict}
+            className="mt-4 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors disabled:bg-blue-300"
+            disabled={selectedSymptoms.length === 0}
+          >
+            Predict
+          </button>
         </div>
       </div>
     </div>
