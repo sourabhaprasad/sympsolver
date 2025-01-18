@@ -93,7 +93,6 @@ const sections = [
   {
     title: "Circulatory System",
     symptoms: [
-      "High fever",
       "Sweating",
       "Dehydration",
       "Fluid overload",
@@ -170,6 +169,7 @@ const sections = [
   {
     title: "General Symptoms",
     symptoms: [
+      "High fever",
       "Fatigue",
       "Weakness in limbs",
       "Malaise",
@@ -182,11 +182,6 @@ const sections = [
       "Puffy face and eyes",
       "Drying and tingling lips",
       "Lack of concentration",
-      "Family history",
-      "Receiving blood transfusion",
-      "Receiving unsterile injections",
-      "Coma",
-      "Stomach bleeding",
       "Distention of abdomen",
     ],
   },
@@ -197,6 +192,10 @@ const sections = [
       "Irregular sugar level",
       "Red spots over body",
       "Polyuria",
+      "Family history",
+      "Receiving blood transfusion",
+      "Receiving unsterile injections",
+      "Stomach bleeding",
       "Spinning movements",
     ],
   },
