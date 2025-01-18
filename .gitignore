@@ -39,3 +39,30 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+# Virtual environment for backend
+/backend/symp-venv/
+
+# Python bytecode files
+*.pyc
+*.pyo
+__pycache__/
+
+# Flask server log files (optional)
+*.log
+
+# Environment configuration files (e.g., .env)
+.env
+
+# Jupyter notebook checkpoints (if using Jupyter)
+.ipynb_checkpoints/
+
+# VS Code settings (optional)
+.vscode/
+
+# IDE specific files
+.idea/
+
+# Build output directories (if applicable)
+.next/
