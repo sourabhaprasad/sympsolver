@@ -7,10 +7,10 @@ const AccordionItem = ({ title, symptoms }) => {
 
   const handleCheckboxChange = (symptom) => {
     if (selectedSymptoms.includes(symptom)) {
-      // If already selected, remove it from the array
+      // if selected, remove it from the array
       setSelectedSymptoms(selectedSymptoms.filter((s) => s !== symptom));
     } else {
-      // Otherwise, add it to the array
+      // add it to the array
       setSelectedSymptoms([...selectedSymptoms, symptom]);
     }
   };
