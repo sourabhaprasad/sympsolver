@@ -1,18 +1,17 @@
 "use client";
 import { useState } from "react";
 
-const AccordionItem = ({ title, symptoms }) => {
+const AccordionItem = ({ title, symptoms, onSectionChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedSymptoms, setSelectedSymptoms] = useState([]);
 
   const handleCheckboxChange = (symptom) => {
-    if (selectedSymptoms.includes(symptom)) {
-      // if selected, remove it from the array
-      setSelectedSymptoms(selectedSymptoms.filter((s) => s !== symptom));
-    } else {
-      // add it to the array
-      setSelectedSymptoms([...selectedSymptoms, symptom]);
-    }
+    const updatedSymptoms = selectedSymptoms.includes(symptom)
+      ? selectedSymptoms.filter((s) => s !== symptom)
+      : [...selectedSymptoms, symptom];
+
+    setSelectedSymptoms(updatedSymptoms);
+    onSectionChange(updatedSymptoms); // Notify parent of updated symptoms
   };
 
   return (
@@ -32,7 +31,7 @@ const AccordionItem = ({ title, symptoms }) => {
                   type="checkbox"
                   id={`symptom-${title}-${index}`}
                   checked={selectedSymptoms.includes(symptom)}
-                  onChange={() => handleCheckboxChange(symptom)} // Handle checkbox change
+                  onChange={() => handleCheckboxChange(symptom)}
                   className="mr-2 p-4"
                 />
                 <label

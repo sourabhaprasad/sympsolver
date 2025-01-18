@@ -1,16 +1,19 @@
 // components/Accordion.jsx
-import AccordionItem from "./AccordianItem";
+import AccordionItem from "./AccordionItem";
 
-const Accordion = ({ sections }) => {
+const Accordion = ({ sections, onSymptomChange }) => {
+  const handleSectionChange = (symptoms) => {
+    onSymptomChange(symptoms); // Pass updated symptoms to CheckerPage
+  };
+
   return (
     <div className="max-w-lg space-y-4">
-      {" "}
-      {/* mx-auto  */}
       {sections.map((section, index) => (
         <AccordionItem
           key={index}
           title={section.title}
           symptoms={section.symptoms}
+          onSectionChange={handleSectionChange}
         />
       ))}
     </div>
