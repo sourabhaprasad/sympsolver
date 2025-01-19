@@ -30,7 +30,6 @@ const CheckerPage = () => {
     try {
       console.log("Sending symptoms:", selectedSymptoms);
 
-      // Send symptoms directly to predict endpoint
       const response = await axios.post(
         "http://localhost:5000/predict",
         {
@@ -46,7 +45,12 @@ const CheckerPage = () => {
       );
 
       console.log("Received prediction:", response.data);
-      setResult(response.data);
+
+      // Save response to localStorage
+      localStorage.setItem("predictionData", JSON.stringify(response.data));
+
+      // Navigate to /predict
+      router.push("/predict");
     } catch (err) {
       console.error("API Request Error:", err);
       setError(err.response?.data?.error || "Failed to fetch prediction");
@@ -103,44 +107,12 @@ const CheckerPage = () => {
             {error && <p className="text-red-500 mb-4">{error}</p>}
             <button
               onClick={handlePredict}
-              className="w-full bg-blue-500 text-white px-6 py-3 rounded-lg hover:bg-blue-600 transition-colors disabled:bg-blue-300 disabled:cursor-not-allowed"
+              className="w-11/12 bg-blue-500 text-white px-4 py-3 rounded-lg hover:bg-blue-600 transition-colors disabled:bg-blue-300 disabled:cursor-not-allowed"
               disabled={selectedSymptoms.length === 0 || loading}
             >
               {loading ? "Processing..." : "Predict"}
             </button>
           </div>
-          {result && (
-            <div className="mt-8 p-6 bg-white rounded-lg shadow">
-              <h3 className="text-xl font-semibold mb-4">Results</h3>
-              <div className="space-y-4">
-                <p>
-                  <strong>Predicted Condition:</strong>{" "}
-                  {result.predicted_disease}
-                </p>
-                <p>
-                  <strong>Description:</strong> {result.desc}
-                </p>
-                <div>
-                  <strong>Precautions:</strong>
-                  <ul className="list-disc pl-5 mt-2">
-                    {result.pre.map((precaution, index) => (
-                      <li key={index}>{precaution}</li>
-                    ))}
-                  </ul>
-                </div>
-                {result.die && result.die.length > 0 && (
-                  <div>
-                    <strong>Dietary Recommendations:</strong>
-                    <ul className="list-disc pl-5 mt-2">
-                      {result.die.map((diet, index) => (
-                        <li key={index}>{diet}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )}
-              </div>
-            </div>
-          )}
         </div>
       </div>
     </div>
