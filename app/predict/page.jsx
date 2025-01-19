@@ -1,6 +1,7 @@
 "use client";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Page = () => {
   const searchParams = useSearchParams();
@@ -18,21 +19,11 @@ const Page = () => {
         }
 
         const symptoms = JSON.parse(decodeURIComponent(symptomsParam));
-
-        const response = await fetch("http://localhost:5000/predict", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ symptoms }),
+        const response = await axios.post("http://localhost:5000/predict", {
+          symptoms,
         });
 
-        if (!response.ok) {
-          throw new Error("Failed to fetch prediction");
-        }
-
-        const data = await response.json();
-        setResult(data);
+        setResult(response.data);
       } catch (err) {
         setError(err instanceof Error ? err.message : "An error occurred");
       } finally {
