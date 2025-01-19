@@ -27,11 +27,22 @@ with open('./models/svc.pkl', 'rb') as f:
 def helper(dis):
     desc = " ".join(description[description['Disease'] == dis]['Description'])
     pre = precautions[precautions['Disease'] == dis][['Precaution_1', 'Precaution_2', 'Precaution_3', 'Precaution_4', 'Additional_Precaution']].values.tolist()
-    die = diets[diets['Disease'] == dis]['Diet'].tolist()
+    
+# Flatten the list to remove nested arrays
+    die = diets[diets['Disease'] == dis][['Diet', 'Diet1', 'Diet2', 'Diet3', 'Diet4']].values.flatten()
+    die = [item.strip() for item in die if item]  # Strip spaces and remove any empty values
+
+
+
     wrkout = workout[workout['disease'] == dis]['workout'].tolist()
-    sym = allsymptoms[allsymptoms['disease'] == dis]['symptoms'].tolist()
-    riskfactors = risk[risk['disease'] == dis]['risk_factors'].tolist()
-    appointment = doctor[doctor['disease'] == dis]['doctor'].tolist()
+    
+    symptoms_str = allsymptoms[allsymptoms['disease'] == dis]['symptoms'].iloc[0]
+    sym = [symptom.strip() for symptom in symptoms_str.split('-')]
+    
+    riskfactors_str = risk[risk['disease'] == dis]['risk_factors'].iloc[0]
+    riskfactors = [risk.strip() for risk in riskfactors_str.split('-')]
+    
+    appointment = doctor[doctor['disease'] == dis]['doctor'].iloc[0]  # Keep appointment as a string
     return desc, pre, die, wrkout, sym, riskfactors, appointment
 
 # Symptom and disease mappings
