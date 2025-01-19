@@ -6,10 +6,8 @@ import numpy as np
 
 app = Flask(__name__)
 
-# Enable CORS for all routes
 CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}}, supports_credentials=True)
 
-# Load datasets
 sym_des = pd.read_csv("data/symtoms_df.csv")
 precautions = pd.read_csv("data/precautions_df.csv")
 workout = pd.read_csv("data/workout_df.csv")
@@ -30,9 +28,7 @@ def helper(dis):
     
 # Flatten the list to remove nested arrays
     die = diets[diets['Disease'] == dis][['Diet', 'Diet1', 'Diet2', 'Diet3', 'Diet4']].values.flatten()
-    die = [item.strip() for item in die if item]  # Strip spaces and remove any empty values
-
-
+    die = [item.strip() for item in die if item]  
 
     wrkout = workout[workout['disease'] == dis]['workout'].tolist()
     
@@ -42,7 +38,7 @@ def helper(dis):
     riskfactors_str = risk[risk['disease'] == dis]['risk_factors'].iloc[0]
     riskfactors = [risk.strip() for risk in riskfactors_str.split('-')]
     
-    appointment = doctor[doctor['disease'] == dis]['doctor'].iloc[0]  # Keep appointment as a string
+    appointment = doctor[doctor['disease'] == dis]['doctor'].iloc[0]  
     return desc, pre, die, wrkout, sym, riskfactors, appointment
 
 # Symptom and disease mappings
@@ -65,7 +61,6 @@ def get_predicted_value(patient_symptoms):
 @app.route('/predict', methods=['POST', 'OPTIONS'])
 def predict():
     if request.method == 'OPTIONS':
-        # Handle preflight request
         response = jsonify({'message': 'Preflight OK'})
         response.headers.add("Access-Control-Allow-Origin", "http://localhost:3000")
         response.headers.add("Access-Control-Allow-Methods", "POST, OPTIONS")
