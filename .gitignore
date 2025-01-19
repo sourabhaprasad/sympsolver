@@ -43,6 +43,7 @@ next-env.d.ts
 
 # Virtual environment for backend
 /backend/symp-venv/
+/backend/SympSolver_ChatBot.egg-info/
 
 # Python bytecode files
 *.pyc
