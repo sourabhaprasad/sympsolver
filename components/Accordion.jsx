@@ -7,7 +7,7 @@ const Accordion = ({ sections, onSymptomChange }) => {
   };
 
   return (
-    <div className="max-w-lg space-y-4">
+    <div className="max-auto space-y-4">
       {sections.map((section, index) => (
         <AccordionItem
           key={index}

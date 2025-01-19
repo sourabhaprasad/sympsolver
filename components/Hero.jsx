@@ -12,7 +12,7 @@ const Hero = () => {
             Symptom evaluator designed for{" "}
             <span className="blue_gradient">you</span> to
           </h1>
-          <ul className="space-y-4 text-2xl">
+          <ul className="space-y-6 text-2xl">
             {" "}
             {/* Add spacing between list items */}
             <li>✔️ Assess your symptoms.</li>
@@ -24,23 +24,24 @@ const Hero = () => {
         </div>
         <div className="w-1/2 flex justify-center">
           {" "}
-          {/* Center image horizontally */}
-          {/* Image here */}
-          <p>Image</p>
-          {/* <img src="/path/to/image.png" alt="Description" className="w-full h-auto max-w-md" /> Example image tag */}
+          <img
+            src="/images/hero-1.jpg"
+            alt="Description"
+            className="w-200 h-auto max-w-md"
+          />
         </div>
       </div>
-      <div className="flex justify-between items-center font-merriweather mb-20">
+      <div className="flex justify-between items-center font-merriweather my-20">
         <div className="w-1/2 flex justify-center">
           {" "}
-          {/* Center image horizontally */}
-          {/* Image here */}
-          <p>Image</p>
-          {/* <img src="/path/to/image.png" alt="Description" className="w-full h-auto max-w-md" /> Example image tag */}
+          <img
+            src="/images/hero2.avif"
+            alt="Description"
+            className="w-full h-auto max-w-md rounded-full"
+          />
         </div>
         <div className=" px-20 w-6/12">
           {" "}
-          {/* Adjust width and padding as needed */}
           <h1 className="text-5xl text-right font-semibold mb-8 pl-2 leading-relaxed">
             {" "}
             About <span className="blue_gradient">SympSolver</span>
@@ -56,9 +57,8 @@ const Hero = () => {
       </div>
       <div className="flex justify-between items-center h-full font-merriweather">
         {" "}
-        <div className="p-20 w-6/12 mb-10">
+        <div className="p-20 w-6/12 my-10">
           {" "}
-          {/* Adjust width and padding as needed */}
           <h1 className="text-5xl font-semibold mb-8 pl-2 leading-relaxed">
             How does it work?{" "}
           </h1>
@@ -75,10 +75,11 @@ const Hero = () => {
         </div>
         <div className="w-1/2 flex justify-center">
           {" "}
-          {/* Center image horizontally */}
-          {/* Image here */}
-          <p>Image</p>
-          {/* <img src="/path/to/image.png" alt="Description" className="w-full h-auto max-w-md" /> Example image tag */}
+          <img
+            src="/images/hero4.webp"
+            alt="Description"
+            className="w-full h-auto max-w-md rounded-full opacity-80"
+          />
         </div>
       </div>
       <h1 className="text-center text-5xl font-semibold mb-8 pl-2 leading-relaxed font-merriweather">
