@@ -19,11 +19,10 @@ const page = () => {
             <p className="mb-4 text-lg">
               Quickly select the symptoms from the dropdown.
             </p>
-            {/* Replace with your image */}
             <img
-              src="/path/to/image2.jpg"
+              src="/images/about1.jpg"
               alt="Description 1"
-              className="w-full h-auto rounded-lg"
+              className="w-1/2 justify-self-center rounded-full"
             />
           </div>
 
@@ -35,11 +34,10 @@ const page = () => {
               Get predictions and explanations for possible conditions based on
               your symptoms.
             </p>
-            {/* Replace with your image */}
             <img
-              src="/path/to/image2.jpg"
+              src="/images/about2.jpeg"
               alt="Description 2"
-              className="w-full h-auto rounded"
+              className="w-3/4 justify-self-center rounded-full"
             />
           </div>
 
@@ -51,11 +49,10 @@ const page = () => {
               Receive tailored advice on tests, lifestyle changes, remedies, and
               consultations.
             </p>
-            {/* Replace with your image */}
             <img
-              src="/path/to/image3.jpg"
+              src="/images/about3.webp"
               alt="Description 3"
-              className="w-full h-auto rounded"
+              className="w-3/4 justify-self-center rounded-full"
             />
           </div>
 
@@ -67,11 +64,10 @@ const page = () => {
               Identify critical symptoms and receive emergency alerts, plus
               nearby hospital suggestions.
             </p>
-            {/* Replace with your image */}
             <img
               src="/path/to/image4.jpg"
               alt="Description 4"
-              className="w-full h-auto rounded"
+              className="w-1/2 justify-self-center rounded"
             />
           </div>
 
@@ -81,11 +77,10 @@ const page = () => {
               Ask questions and get instant answers with our friendly chatbot
               interface.
             </p>
-            {/* Replace with your image */}
             <img
-              src="/path/to/image4.jpg"
+              src="/images/about4.webp"
               alt="Description 5"
-              className="w-full h-auto rounded"
+              className="w-3/4 justify-self-center rounded-full"
             />
           </div>
 
@@ -95,11 +90,10 @@ const page = () => {
               Step-by-step updates to guide your next steps in managing your
               health.{" "}
             </p>
-            {/* Replace with your image */}
             <img
-              src="/path/to/image4.jpg"
+              src="/images/about6.jpg"
               alt="Description 6"
-              className="w-full h-auto rounded"
+              className="w-3/4 justify-self-center rounded-full"
             />
           </div>
         </div>
