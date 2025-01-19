@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Button from "@components/Button";
 
 const PredictPage = () => {
   const [data, setData] = useState(null);
@@ -110,6 +111,9 @@ const PredictPage = () => {
           </h2>
           <p className="p-6">{appointment}</p>
         </div>
+      </div>
+      <div className="flex items-center justify-center h-screen">
+        <Button text="Download PDF" href="/" />
       </div>
     </div>
   );

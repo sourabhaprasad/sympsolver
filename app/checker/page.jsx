@@ -61,7 +61,7 @@ const CheckerPage = () => {
 
   return (
     <div className="min-h-screen p-6 font-merriweather">
-      <h1 className="text-4xl font-bold mb-4 text-center">
+      <h1 className="text-4xl font-bold mb-8 text-center">
         Symptom Assessment
       </h1>
       <div className="flex flex-col lg:flex-row gap-8 max-w-7xl mx-auto">
@@ -96,7 +96,7 @@ const CheckerPage = () => {
           </ul>
         </div>
         <div className="lg:w-1/2 bg-[#E8F2FF] p-8 rounded-lg shadow">
-          <h2 className="text-2xl font-semibold mb-6">
+          <h2 className="text-2xl text-center font-semibold mb-6">
             What are your symptoms?
           </h2>
           <Accordion
