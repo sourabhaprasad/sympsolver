@@ -21,9 +21,9 @@ const page = () => {
             </p>
             {/* Replace with your image */}
             <img
-              src="/path/to/image1.jpg"
+              src="/path/to/image2.jpg"
               alt="Description 1"
-              className="w-full h-auto rounded"
+              className="w-full h-auto rounded-lg"
             />
           </div>
 
