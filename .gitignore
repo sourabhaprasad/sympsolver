@@ -44,6 +44,7 @@ next-env.d.ts
 # Virtual environment for backend
 /backend/symp-venv/
 /backend/SympSolver_ChatBot.egg-info/
+/backend/models/llama-2-7b-chat.ggmlv3.q4_0.bin
 
 # Python bytecode files
 *.pyc
@@ -67,3 +68,4 @@ __pycache__/
 
 # Build output directories (if applicable)
 .next/
+
