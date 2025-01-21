@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { jsPDF } from "jspdf"; // Import jsPDF
+import { jsPDF } from "jspdf";
 
 const PredictPage = () => {
   const [data, setData] = useState(null);
@@ -110,25 +110,25 @@ const PredictPage = () => {
 
   return (
     <div className="p-4 font-merriweather mx-40">
-      <h1 className="text-4xl font-bold text-center mb-10">Results</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mx-40 mb-20">
+      <h1 className="text-2xl font-bold text-center mb-10">Results</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 m-10">
         <div className="bg-[#E8F2FF] p-4 rounded-lg">
-          <h2 className="text-2xl text-center my-4 font-semibold">
+          <h2 className="text-lg text-center my-4 font-semibold">
             Predicted Disease
           </h2>
-          <p className="font-bold p-4">{predicted_disease}</p>
+          <p className="font-bold text-lg p-4">{predicted_disease}</p>
         </div>
         <div className="bg-[#E8F2FF] p-4 rounded-lg">
-          <h2 className="text-2xl text-center my-4 font-semibold">
+          <h2 className="text-lg text-center my-4 font-semibold">
             Description
           </h2>
-          <p>{desc}</p>
+          <p className="text-sm">{desc}</p>
         </div>
         <div className="bg-[#E8F2FF] p-4 rounded-lg">
-          <h2 className="text-2xl text-center my-4 font-semibold">
+          <h2 className="text-lg text-center my-4 font-semibold">
             Precautions
           </h2>
-          <ul className="list-disc pl-6 p-4">
+          <ul className="list-disc text-sm pl-6 p-4">
             {pre.map((item, index) => (
               <li key={index}>
                 {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -138,10 +138,10 @@ const PredictPage = () => {
         </div>
 
         <div className="bg-[#E8F2FF] p-4 rounded-lg">
-          <h2 className="text-2xl text-center my-4 font-semibold">
+          <h2 className="text-lg text-center my-4 font-semibold">
             Diet Recommendations
           </h2>
-          <ul className="list-disc pl-6 p-4">
+          <ul className="list-disc text-sm pl-6 p-4">
             {die.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -149,8 +149,8 @@ const PredictPage = () => {
         </div>
 
         <div className="bg-[#E8F2FF] p-4 rounded-lg">
-          <h2 className="text-2xl text-center my-4 font-semibold">Self-Care</h2>
-          <ul className="list-disc pl-6 p-4">
+          <h2 className="text-lg text-center my-4 font-semibold">Self-Care</h2>
+          <ul className="list-disc text-sm pl-6 p-4">
             {wrkout.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -158,8 +158,8 @@ const PredictPage = () => {
         </div>
 
         <div className="bg-[#E8F2FF] p-4 rounded-lg">
-          <h2 className="text-2xl text-center my-4 font-semibold">Symptoms</h2>
-          <ul className="list-disc pl-6 p-4">
+          <h2 className="text-lg text-center my-4 font-semibold">Symptoms</h2>
+          <ul className="list-disc text-sm pl-6 p-4">
             {sym.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
@@ -167,27 +167,27 @@ const PredictPage = () => {
         </div>
 
         <div className="bg-[#E8F2FF] p-4 rounded-lg">
-          <h2 className="text-2xl text-center my-4 font-semibold">
+          <h2 className="text-lg text-center my-4 font-semibold">
             Risk Factors
           </h2>
-          <ul className="list-disc pl-6 p-4">
+          <ul className="list-disc text-sm pl-6 p-4">
             {riskfactors.map((item, index) => (
               <li key={index}>{item}</li>
             ))}
           </ul>
         </div>
         <div className="bg-[#E8F2FF] p-4 rounded-lg">
-          <h2 className="text-2xl text-center my-4 font-semibold">
+          <h2 className="text-lg text-center my-4 font-semibold">
             Recommended Appointment
           </h2>
-          <p className="p-6">{appointment}</p>
+          <p className="p-6 text-sm">{appointment}</p>
         </div>
       </div>
       <div className="flex items-center justify-center">
         {/* Replace the custom button with a normal HTML button */}
         <button
           onClick={generatePDF}
-          className="bg-blue-500 text-white text-2xl mb-20 px-4 py-2 rounded"
+          className="bg-blue-500 text-white text-xl mb-20 px-4 py-2 rounded"
         >
           Download PDF
         </button>

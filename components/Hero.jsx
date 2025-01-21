@@ -5,14 +5,14 @@ const Hero = () => {
     <div>
       <div className="flex justify-between items-center h-full font-merriweather">
         {" "}
-        <div className="py-20 px-40 w-6/12 mb-10">
+        <div className="py-10 px-40 w-7/12 mb-10">
           {" "}
           {/* Adjust width and padding as needed */}
-          <h1 className="text-5xl font-semibold mb-8 pl-2 leading-relaxed">
+          <h1 className="text-3xl font-semibold mb-8  leading-relaxed">
             Symptom evaluator designed for{" "}
             <span className="blue_gradient">you</span> to
           </h1>
-          <ul className="space-y-6 text-2xl">
+          <ul className="space-y-6">
             {" "}
             {/* Add spacing between list items */}
             <li>✔️ Assess your symptoms.</li>
@@ -37,16 +37,16 @@ const Hero = () => {
           <img
             src="/images/hero2.avif"
             alt="Description"
-            className="w-full h-auto max-w-md rounded-full"
+            className="w-7/12 h-auto max-w-md rounded-full"
           />
         </div>
         <div className=" px-20 w-6/12">
           {" "}
-          <h1 className="text-5xl text-right font-semibold mb-8 pl-2 leading-relaxed">
+          <h1 className="text-3xl text-right font-semibold mb-8 pl-2 leading-relaxed">
             {" "}
             About <span className="blue_gradient">SympSolver</span>
           </h1>
-          <p className=" text-2xl leading-relaxed text-right">
+          <p className="leading-relaxed text-right">
             SympSolver is a user-friendly symptom checker that helps you
             identify and understand your symptoms. It provides insights into
             possible diseases, detailed descriptions, recommended precautions,
@@ -59,10 +59,10 @@ const Hero = () => {
         {" "}
         <div className="p-20 w-6/12 my-10">
           {" "}
-          <h1 className="text-5xl font-semibold mb-8 pl-2 leading-relaxed">
+          <h1 className="text-3xl font-semibold mb-8 pl-2 leading-relaxed">
             How does it work?{" "}
           </h1>
-          <p className=" text-2xl leading-relaxed">
+          <p className="leading-relaxed">
             Using SympSolver is simple and straightforward. Just input your
             symptoms into the tool, and SympSolver will analyze them to identify
             potential diseases and conditions. Based on your input, it provides
@@ -78,18 +78,16 @@ const Hero = () => {
           <img
             src="/images/hero4.webp"
             alt="Description"
-            className="w-full h-auto max-w-md rounded-full opacity-80"
+            className="w-7/12 h-auto max-w-md rounded-full opacity-80"
           />
         </div>
       </div>
-      <h1 className="text-center text-5xl font-semibold mb-8 pl-2 leading-relaxed font-merriweather">
+      <h1 className="text-center text-3xl font-semibold mb-8 pl-2 leading-relaxed font-merriweather">
         How to use?
       </h1>
       <section className="grid grid-cols-1 md:grid-cols-3 gap-12 p-10 m-10 font-merriweather">
         <div className="bg-[#EBDAD2] p-12 rounded-lg shadow-md text-center">
-          <h3 className="text-2xl mb-2">
-            1. Open SympSolver when you're feeling ill.
-          </h3>
+          <h3 className="mb-2">1. Open SympSolver when you're feeling ill.</h3>
           <img
             src="/images/sick.webp"
             alt="Description 1"
@@ -98,9 +96,7 @@ const Hero = () => {
         </div>
 
         <div className="bg-[#EBDAD2] p-12 rounded-lg shadow-md text-center">
-          <h3 className="text-2xl mb-2">
-            2. Select the symptoms you're experiencing
-          </h3>
+          <h3 className="mb-2">2. Select the symptoms you're experiencing</h3>
           <img
             src="/images/select-symptoms.png"
             alt="Description 2"
@@ -109,7 +105,7 @@ const Hero = () => {
         </div>
 
         <div className="bg-[#EBDAD2] p-12 rounded-lg shadow-md text-center">
-          <h3 className="text-2xl mb-2">
+          <h3 className="mb-2">
             3. Recieve the most likely diagnosis along with recommendations.
           </h3>
           <img
@@ -120,10 +116,10 @@ const Hero = () => {
         </div>
       </section>
       <div className="font-merriweather w-3/5 m-20">
-        <h1 className="text-4xl font-semibold leading-relaxed mb-5">
+        <h1 className="text-3xl font-semibold leading-relaxed mb-5">
           Disclaimer
         </h1>
-        <p className="text-2xl leading-relaxed">
+        <p className="text-lg leading-relaxed">
           SympSolver is not a substitute for professional medical advice,
           diagnosis, or treatment. It provides information to assist with
           understanding symptoms based on general knowledge and should not
