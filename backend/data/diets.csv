@@ -12,7 +12,7 @@ Bronchial Asthma,Anti-inflammatory diet,Omega-3-rich foods,Fruits and vegetables
 Hypertension,DASH diet,Low-sodium foods,Fruits and vegetables,Whole grains,Lean proteins
 Migraine,Low-tyramine diet,Caffeine moderation,Hydration,Magnesium-rich foods,Herbal teas
 Cervical spondylosis,Anti-inflammatory diet,Omega-3-rich foods,Fruits and vegetables,Whole grains,Lean proteins
-Paralysis (brain hemorrhage),Heart-healthy diet,Low-sodium foods,Fruits and vegetables,Whole grains,Lean proteins
+Paralysis,Heart-healthy diet,Low-sodium foods,Fruits and vegetables,Whole grains,Lean proteins
 Jaundice,Liver-friendly diet,Low-fat foods,Fruits and vegetables,Whole grains,Lean proteins
 Malaria,Hydration-focused diet,High-calorie foods,Soft and bland foods,Oral rehydration solutions,Protein-rich foods
 Chicken pox,Hydration-focused diet,Soft and bland foods,High-calorie foods,Protein-rich snacks,Vitamin C-rich fruits
@@ -27,7 +27,7 @@ Alcoholic hepatitis,Liver-friendly diet,Low-fat foods,Fruits and vegetables,Whol
 Tuberculosis,High-calorie diet,Soft and bland foods,Hydration,Protein-rich snacks,Whole grains
 Common Cold,Hydration-focused diet,Warm fluids,Honey and lemon tea,Rest,Vitamin C-rich foods
 Pneumonia,High-calorie diet,Soft and bland foods,Hydration,Protein-rich snacks,Fruits and vegetables
-Dimorphic hemorrhoids (piles),High-fiber diet,Hydration,Warm fluids,Whole grains,Fresh fruits
+Dimorphic hemorrhoids,High-fiber diet,Hydration,Warm fluids,Whole grains,Fresh fruits
 Heart attack,Heart-healthy diet,Low-sodium foods,Fruits and vegetables,Whole grains,Lean proteins
 Varicose veins,High-fiber diet,Low-sodium foods,Fruits and vegetables,Whole grains,Hydration
 Hypothyroidism,Iodine-rich foods,Selenium-rich foods,Fruits and vegetables,Whole grains,Lean proteins
@@ -35,7 +35,7 @@ Hyperthyroidism,Low-iodine diet,Calcium-rich foods,Selenium-rich foods,Fruits an
 Hypoglycemia,Complex carbohydrates,Protein-rich snacks,Fiber-rich foods,Healthy fats,Low-glycemic fruits
 Osteoarthritis,Anti-inflammatory diet,Omega-3-rich foods,Fruits and vegetables,Whole grains,Lean proteins
 Arthritis,Anti-inflammatory diet,Omega-3-rich foods,Fruits and vegetables,Whole grains,Lean proteins
-(vertigo) Paroxysmal Positional Vertigo,Low-salt diet,Hydration,Ginger tea,Vitamin D-rich foods,Lean proteins
+vertigo,Low-salt diet,Hydration,Ginger tea,Vitamin D-rich foods,Lean proteins
 Acne,Low-glycemic diet,Hydration,Fruits and vegetables,Probiotics,Omega-3-rich foods
 Urinary tract infection,Hydration-focused diet,Cranberry juice,Probiotics,Vitamin C-rich foods,Whole grains
 Psoriasis,Anti-inflammatory diet,Omega-3-rich foods,Fruits and vegetables,Whole grains,Lean proteins

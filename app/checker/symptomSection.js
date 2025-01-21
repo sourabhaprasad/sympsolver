@@ -176,6 +176,7 @@ const sections = [
       "Lethargy",
       "Unsteadiness",
       "Cramps",
+      "Chills",
       "Bruising",
       "Obesity",
       "Puffy face and eyes",
@@ -195,6 +196,7 @@ const sections = [
       "Receiving unsterile injections",
       "Stomach bleeding",
       "Spinning movements",
+      "Family history",
     ],
   },
 ];
