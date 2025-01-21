@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Button from "@components/Button";
+import { jsPDF } from "jspdf"; // Import jsPDF
 
 const PredictPage = () => {
   const [data, setData] = useState(null);
@@ -35,7 +35,78 @@ const PredictPage = () => {
     appointment = "No appointment details available.",
   } = data;
 
-  console.log(die); // testing
+  // Function to generate PDF
+  const generatePDF = () => {
+    const doc = new jsPDF();
+    let yPos = 40;
+
+    // Title
+    doc.setFont("times", "normal");
+    doc.setFontSize(16);
+    doc.setFont("times", "bold");
+    doc.text("Results", 20, yPos);
+    yPos += 10;
+
+    // Predicted Disease (bold heading)
+    doc.setFont("times", "bold");
+    doc.setFontSize(13);
+    doc.text("Predicted Disease: " + predicted_disease, 20, yPos);
+    yPos += 10;
+
+    // Description (with text wrapping, bold heading)
+    doc.setFont("times", "bold");
+    const descriptionLines = doc.splitTextToSize("Description: " + desc, 180); // 180 is the max width for wrapping
+    doc.text(descriptionLines, 20, yPos);
+    yPos += descriptionLines.length * 10 + 10;
+
+    // Function to add content and check for page overflow, with bold heading
+    const addContentWithPageCheck = (contentArray, yPosition, label) => {
+      if (yPosition + contentArray.length * 10 + 10 > 270) {
+        doc.addPage();
+        yPosition = 20;
+      }
+      doc.setFont("times", "bold");
+      doc.setFontSize(13);
+      doc.text(label, 20, yPosition);
+      yPosition += 10;
+      doc.setFont("times", "normal"); // Set back to normal for content
+      contentArray.forEach((item, index) => {
+        if (yPosition > 270) {
+          doc.addPage();
+          yPosition = 20;
+        }
+        doc.text(index + 1 + ". " + item, 20, yPosition);
+        yPosition += 10;
+      });
+      return yPosition;
+    };
+
+    // Precautions (bold heading)
+    yPos = addContentWithPageCheck(pre, yPos, "Precautions:");
+
+    // Diet Recommendations (bold heading)
+    yPos = addContentWithPageCheck(die, yPos, "Diet Recommendations:");
+
+    // Self-Care (Workout) (bold heading)
+    yPos = addContentWithPageCheck(wrkout, yPos, "Self-Care (Workout):");
+
+    // Symptoms (bold heading)
+    yPos = addContentWithPageCheck(sym, yPos, "Symptoms:");
+
+    // Risk Factors (bold heading)
+    yPos = addContentWithPageCheck(riskfactors, yPos, "Risk Factors:");
+
+    // Recommended Appointment (with text wrapping, bold heading)
+    doc.setFont("times", "bold");
+    const appointmentLines = doc.splitTextToSize(
+      "Recommended Appointment: " + appointment,
+      180
+    );
+    doc.text(appointmentLines, 20, yPos);
+
+    // Save the PDF
+    doc.save("prediction_results.pdf");
+  };
 
   return (
     <div className="p-4 font-merriweather mx-40">
@@ -112,8 +183,14 @@ const PredictPage = () => {
           <p className="p-6">{appointment}</p>
         </div>
       </div>
-      <div className="flex items-center justify-center h-screen">
-        <Button text="Download PDF" href="/" />
+      <div className="flex items-center justify-center">
+        {/* Replace the custom button with a normal HTML button */}
+        <button
+          onClick={generatePDF}
+          className="bg-blue-500 text-white text-2xl mb-20 px-4 py-2 rounded"
+        >
+          Download PDF
+        </button>
       </div>
     </div>
   );

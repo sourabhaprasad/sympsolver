@@ -1,6 +1,27 @@
-const Page = () => {
+"use client";
+import { useState } from "react";
+
+export default function Page() {
+  const [query, setQuery] = useState("");
+  const [response, setResponse] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!query) return;
+
+    const res = await fetch("http://localhost:5000/chatbot", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ query }),
+    });
+    const data = await res.json();
+    setResponse(data.response);
+  };
+
   return (
-    <div className="font-merriweather flex flex-col items-center justify-center  p-4">
+    <div className="font-merriweather flex flex-col items-center justify-center p-4">
       <h1 className="text-center font-semibold text-4xl mb-12">ChatBot</h1>
       <div className="bg-[#F0F0F0] w-full max-w-3xl rounded-lg shadow-md p-6 mb-20">
         <div className="flex items-center bg-[#E8E5E5] rounded-lg p-6 mb-6">
@@ -21,27 +42,32 @@ const Page = () => {
           </div>
         </div>
         <div className="space-y-4">
-          <div className="flex items-center bg-[#CCE9DB] rounded-lg p-4">
-            <div className="w-10 h-10 rounded-full mr-3">
-              <img src="/icons/robot.png" alt="chatbot" />
+          {response && (
+            <div className="flex items-center bg-[#CCE9DB] rounded-lg p-4">
+              <div className="w-10 h-10 rounded-full mr-3">
+                <img src="/icons/robot.png" alt="chatbot" />
+              </div>
+              <p className="text-gray-900">{response}</p>
             </div>
-            <p className="text-gray-900">
-              This is a response from the chatbot.
-            </p>
-          </div>
-          <div className="flex justify-between items-center bg-[#C6E3FC] rounded-lg p-4">
-            <p className="text-gray-900 text-right flex-1">
-              This is a question asked by the user.
-            </p>
-            <div className="w-10 h-10 rounded-full ml-3">
-              <img src="/icons/user.png" alt="user" />
+          )}
+          {query && (
+            <div className="flex justify-between items-center bg-[#C6E3FC] rounded-lg p-4">
+              <p className="text-gray-900 text-right flex-1">{query}</p>
+              <div className="w-10 h-10 rounded-full ml-3">
+                <img src="/icons/user.png" alt="user" />
+              </div>
             </div>
-          </div>
+          )}
         </div>
         <div className="mt-6">
-          <form className="flex items-center bg-[#E8E5E5] rounded-lg p-2 border border-[#CECBCB]">
+          <form
+            onSubmit={handleSubmit}
+            className="flex items-center bg-[#E8E5E5] rounded-lg p-2 border border-[#CECBCB]"
+          >
             <input
               type="text"
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
               placeholder="Ask anything...."
               required
               className="flex-1 bg-transparent outline-none p-2"
@@ -57,6 +83,4 @@ const Page = () => {
       </div>
     </div>
   );
-};
-
-export default Page;
+}
