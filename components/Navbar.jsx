@@ -17,20 +17,20 @@ const Navbar = () => {
         <p className="font-handlee text-3xl font-bold">SympSolver</p>
       </Link>
 
-      <div className="flex gap-6 items-center font-funnel ">
-        <Link href="/" className="text-2xl link">
+      <div className="flex gap-4 items-center text-[20px] font-funnel ">
+        <Link href="/" className="link">
           Home
         </Link>
-        <Link href="/about" className="text-2xl link">
+        <Link href="/about" className="link">
           About
         </Link>
-        <Link href="/checker" className="text-2xl link">
+        <Link href="/checker" className="link">
           Checker
         </Link>
-        <Link href="/chatbot" className="text-2xl link">
+        <Link href="/chatbot" className="link">
           ChatBot
         </Link>
-        <Link href="/urgentcare" className="text-2xl link">
+        <Link href="/urgentcare" className="link">
           Urgent-Care
         </Link>
       </div>
