@@ -46,7 +46,7 @@ const page = () => {
               Personalized Health Recommendations
             </h1>
             <p className="mb-4 text-lg">
-              Receive tailored advice on tests, lifestyle changes, remedies, and
+              Receive tailored advice on lifestyle changes, remedies, and
               consultations.
             </p>
             <img

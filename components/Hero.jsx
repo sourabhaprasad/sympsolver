@@ -1,14 +1,23 @@
+"use client";
+import { useState, useEffect } from "react";
 import Button from "./Button";
 
 const Hero = () => {
+  useEffect(() => {
+    const script = document.createElement("script");
+    script.src =
+      "https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1";
+    script.async = true;
+    document.body.appendChild(script);
+  }, []);
   return (
     <div>
       <div className="flex justify-between items-center h-full font-merriweather">
         {" "}
-        <div className="py-10 px-40 w-7/12 mb-10">
+        <div className="py-10 px-20 w-7/12">
           {" "}
           {/* Adjust width and padding as needed */}
-          <h1 className="text-3xl font-semibold mb-8  leading-relaxed">
+          <h1 className="text-3xl font-semibold mb-8 mr-40 leading-relaxed">
             Symptom evaluator designed for{" "}
             <span className="blue_gradient">you</span> to
           </h1>
@@ -31,7 +40,7 @@ const Hero = () => {
           />
         </div>
       </div>
-      <div className="flex justify-between items-center font-merriweather my-20">
+      <div className="flex justify-between items-center font-merriweather my-10">
         <div className="w-1/2 flex justify-center">
           {" "}
           <img
@@ -127,6 +136,15 @@ const Hero = () => {
           concerns or questions about the results from SympSolver, please
           consult your healthcare professional.
         </p>
+      </div>
+      <div>
+        <df-messenger
+          intent="WELCOME"
+          chat-title="SympSolver"
+          agent-id="f75e7be7-c8e6-4a0a-afc0-a81314584e58"
+          language-code="en"
+          className="w-full h-50px shadow-lg border border-gray-300 rounded-lg"
+        ></df-messenger>
       </div>
     </div>
   );

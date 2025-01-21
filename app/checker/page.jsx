@@ -97,7 +97,7 @@ const CheckerPage = () => {
             <h2 className="text-lg text-center font-semibold my-6">
               Symptoms needing immediate medical attention.
             </h2>
-            <ul className="list-disc pl-2 text-[16px] leading-normal mb-8">
+            <ul className="list-disc pl-2 text-[16px] leading-loose mb-8">
               {[
                 {
                   name: "Slurred Speech",

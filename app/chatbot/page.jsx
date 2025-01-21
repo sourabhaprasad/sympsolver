@@ -60,25 +60,13 @@ export default function Page() {
           )}
         </div>
         <div className="mt-6">
-          <form
-            onSubmit={handleSubmit}
-            className="flex items-center bg-[#E8E5E5] rounded-lg p-2 border border-[#CECBCB]"
-          >
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="Ask anything...."
-              required
-              className="flex-1 bg-transparent outline-none p-2"
-            />
-            <button
-              type="submit"
-              className="text-blue-500 hover:text-blue-700 p-2"
-            >
-              <i className="fas fa-location-arrow"></i>
-            </button>
-          </form>
+          <iframe
+            width="720"
+            height="430"
+            allow="microphone;"
+            src="https://console.dialogflow.com/api-client/demo/embedded/f75e7be7-c8e6-4a0a-afc0-a81314584e58"
+            className="border rounded-lg shadow-md w-full"
+          ></iframe>
         </div>
       </div>
     </div>
