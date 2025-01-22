@@ -143,7 +143,7 @@ const Hero = () => {
           chat-title="SympSolver"
           agent-id="f75e7be7-c8e6-4a0a-afc0-a81314584e58"
           language-code="en"
-          className="w-full h-50px shadow-lg border border-gray-300 rounded-lg"
+          className="w-full h-30px shadow-lg border border-gray-300 rounded-lg"
         ></df-messenger>
       </div>
     </div>

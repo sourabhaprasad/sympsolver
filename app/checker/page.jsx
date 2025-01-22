@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import Accordion from "@components/Accordion";
 import sections from "./symptomSection";
+import Button from "@components/Button";
 import axios from "axios";
 
 const CheckerPage = () => {
@@ -93,7 +94,7 @@ const CheckerPage = () => {
               services.
             </li>
           </ul>
-          <div>
+          <div className="my-0">
             <h2 className="text-lg text-center font-semibold my-6">
               Symptoms needing immediate medical attention.
             </h2>
@@ -165,6 +166,7 @@ const CheckerPage = () => {
                 </li>
               ))}
             </ul>
+            <Button text="Search nearby hospitals" href="/urgentcare" />{" "}
           </div>
         </div>
         <div className="lg:w-1/2 bg-[#E8F2FF] p-8 rounded-lg shadow">
