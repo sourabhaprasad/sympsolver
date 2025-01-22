@@ -33,7 +33,7 @@ const sections = [
     ],
   },
   {
-    title: "Head & Neck",
+    title: "Head",
     symptoms: [
       "Headache",
       "Pain behind the eyes",
