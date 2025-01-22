@@ -12,8 +12,8 @@ const UrgentCare = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
-      "https://maps.gomaps.pro/maps/api/js?key=AlzaSyVp5oVvR1skwUjaesFSlM1Ib0axArkQngK&libraries=geometry,places&callback=initMap";
-    script.async = true;
+      // "https://maps.gomaps.pro/maps/api/js?key=AlzaSyVp5oVvR1skwUjaesFSlM1Ib0axArkQngK&libraries=geometry,places&callback=initMap";
+      script.async = true;
     script.defer = true;
     script.onload = () => {
       const newMap = new google.maps.Map(document.getElementById("map"), {
