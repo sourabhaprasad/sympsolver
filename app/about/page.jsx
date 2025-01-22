@@ -58,11 +58,11 @@ const page = () => {
 
           <div className="bg-[#E8F2FF] p-4 m-10 rounded-lg shadow-md">
             <h1 className="text-xl font-bold mb-2">
-              Real-Time Emergency Alerts
+              Locate Nearby Hospitals by Locality
             </h1>
             <p className="mb-4 text-lg">
-              Identify critical symptoms and receive emergency alerts, plus
-              nearby hospital suggestions.
+              Identify critical symptoms and search nearby hospitals based on
+              locality.
             </p>
             <img
               src="/path/to/image4.jpg"
