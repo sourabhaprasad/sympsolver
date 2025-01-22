@@ -65,9 +65,9 @@ const page = () => {
               locality.
             </p>
             <img
-              src="/path/to/image4.jpg"
+              src="/images/about7.webp"
               alt="Description 4"
-              className="w-1/2 justify-self-center rounded"
+              className="w-1/2 justify-self-center"
             />
           </div>
 
