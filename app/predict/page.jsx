@@ -6,7 +6,6 @@ const PredictPage = () => {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    // Retrieve prediction data from localStorage
     const predictionData = localStorage.getItem("predictionData");
     if (predictionData) {
       setData(JSON.parse(predictionData));
@@ -81,22 +80,16 @@ const PredictPage = () => {
       return yPosition;
     };
 
-    // Precautions (bold heading)
     yPos = addContentWithPageCheck(pre, yPos, "Precautions:");
 
-    // Diet Recommendations (bold heading)
     yPos = addContentWithPageCheck(die, yPos, "Diet Recommendations:");
 
-    // Self-Care (Workout) (bold heading)
     yPos = addContentWithPageCheck(wrkout, yPos, "Self-Care (Workout):");
 
-    // Symptoms (bold heading)
     yPos = addContentWithPageCheck(sym, yPos, "Symptoms:");
 
-    // Risk Factors (bold heading)
     yPos = addContentWithPageCheck(riskfactors, yPos, "Risk Factors:");
 
-    // Recommended Appointment (with text wrapping, bold heading)
     doc.setFont("times", "bold");
     const appointmentLines = doc.splitTextToSize(
       "Recommended Appointment: " + appointment,

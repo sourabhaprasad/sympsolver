@@ -23,7 +23,6 @@ const Navbar = () => {
           { name: "Home", href: "/" },
           { name: "About", href: "/about" },
           { name: "Checker", href: "/checker" },
-          { name: "ChatBot", href: "/chatbot" },
           { name: "Urgent-Care", href: "/urgentcare" },
         ].map((link) => (
           <Link

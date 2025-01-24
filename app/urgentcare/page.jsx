@@ -12,17 +12,16 @@ const UrgentCare = () => {
   useEffect(() => {
     const script = document.createElement("script");
     script.src =
-      "https://maps.gomaps.pro/maps/api/js?key=AlzaSyVp5oVvR1skwUjaesFSlM1Ib0axArkQngK&libraries=geometry,places&callback=initMap";
+      "https://maps.gomaps.pro/maps/api/js?key=AlzaSy-mPoD6gdJQZE6wpVNWOWF-eMennElJMSh&libraries=geometry,places&callback=initMap";
     script.async = true;
     script.defer = true;
     script.onload = () => {
       const newMap = new google.maps.Map(document.getElementById("map"), {
-        center: { lat: 12.9268265, lng: 77.5264939 }, // Default center
+        center: { lat: 12.9268265, lng: 77.5264939 },
         zoom: 13,
       });
       setMap(newMap);
 
-      // Fetch the user's location using Geolocation API
       if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
           (position) => {

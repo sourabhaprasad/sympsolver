@@ -46,7 +46,6 @@ const CheckerPage = () => {
 
       console.log("Received prediction:", response.data);
 
-      // Save response to localStorage
       localStorage.setItem("predictionData", JSON.stringify(response.data));
 
       // Navigate to /predict
