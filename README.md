@@ -1,36 +1,107 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# SympSolver - AI-Driven Symptoms Analysis Platform
 
-## Getting Started
+SympSolver is an AI-powered healthcare platform that provides real-time preliminary diagnosis, risk assessment, and personalized medical recommendations based on user-reported symptoms. The platform combines a **Next.js** web interface, **Flask** backend processing, a **Support Vector Machine (SVM) model** for disease prediction, and a **Dialogflow-based conversational chatbot** for interactive, accessible, and proactive health management.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## Project Description
+
+SympSolver enables users to input their symptoms via a dropdown interface or an integrated chatbot and instantly receive:
+
+* Probable diagnoses (SVM-based)
+* Personalized health advice
+* Lifestyle modification suggestions
+* Emergency alerts for critical symptoms
+* Nearby hospital recommendations via Google Maps integration
+
+The system leverages a **Support Vector Machine (SVM)** model for highly accurate disease prediction and continuously refines its outputs based on updated user data.
+
+---
+
+## Features
+
+* **SVM-Based Symptom Analysis**: Instant preliminary diagnosis using the SVM model with \~98% accuracy.
+* **Conversational Chatbot**: Integrated using Dialogflow for symptom input, health queries, and follow-up advice.
+* **Real-Time Predictions**: Backend Flask API processes inputs and serves live predictions.
+* **Emergency Alerts**: Dynamically flags critical symptoms like chest pain or shortness of breath.
+* **Nearby Hospital Locator**: Embedded Google Maps and OpenStreetMap to find nearby medical facilities.
+* **Downloadable PDF Reports**: Users can download a summary of their diagnosis and recommendations.
+* **User-Friendly Web Interface**: Built with Next.js and Tailwind CSS for responsive, smooth interaction.
+* **Dynamic Critical Symptom Flagging**: Provides immediate emergency alerts when necessary.
+
+---
+
+## Tech Stack
+
+### Frontend
+
+* **Next.js** – React-based framework for building fast and scalable UIs.
+* **Tailwind CSS** – Modern, utility-first CSS framework.
+* **Axios** – For efficient API communication.
+* **Google Maps API & OpenStreetMap API** – For hospital location services.
+
+### Backend
+
+* **Flask (Python)** – REST API to process symptoms and serve ML predictions.
+* **Pickle** – Used to serialize and load trained ML models.
+* **Support Vector Machine (SVM)** – Selected for its superior accuracy (\~98%), precision, and recall.
+* **Additional ML Models Evaluated:** Random Forest, XGBoost, CatBoost, KNN, Multinomial Naive Bayes (for comparison).
+
+### Chatbot
+
+* **Dialogflow** – Conversational agent for symptom collection and user interaction.
+
+---
+
+## Project Structure
+
+```plaintext
+├── app/                 # Next.js frontend structure
+├── components/          # UI components (symptom input, chatbot, result display)
+├── public/              # Static assets (images, icons)
+├── styles/              # Tailwind CSS configuration and styling
+├── backend/             # Flask backend serving prediction API and ML models
+├── requirements.txt     # Python dependencies for backend
+├── README.md            # Project documentation
+└── package.json         # Frontend dependencies
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Running the Project
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Setup Backend (Flask)
 
-## Learn More
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
 
-To learn more about Next.js, take a look at the following resources:
+The backend will be available at `http://localhost:5000`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. Setup Frontend (Next.js)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```bash
+npm install
+npm run dev
+```
 
-## Deploy on Vercel
+The frontend will run on `http://localhost:3000`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 3. Chatbot Setup
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+* Import the provided **Dialogflow agent** in your Dialogflow console.
+* Connect Dialogflow API to your frontend using the webhook integration provided.
+
+---
+
+## Future Enhancements
+
+* Mobile Application Support
+* Multilingual Chatbot Integration
+* User Authentication & Symptom Tracking
+* Integration with Electronic Health Records (EHR)
+* Advanced Predictive Analytics for Long-Term Health Monitoring
+* Deployment to Vercel / Netlify and Cloud Hosting for Flask API
+
