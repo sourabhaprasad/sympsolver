@@ -31,6 +31,13 @@ The system leverages a **Support Vector Machine (SVM)** model for highly accurat
 
 ---
 
+## Preview
+
+
+https://github.com/user-attachments/assets/16e3b7fe-0c4c-4d02-a9a9-5f94ea068f45
+
+
+
 ## Tech Stack
 
 ### Frontend
